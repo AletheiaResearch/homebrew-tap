@@ -5,13 +5,13 @@
 class Mnemosyne < Formula
   desc "Export coding-assistant histories to unified, anonymized archives."
   homepage "https://github.com/AletheiaResearch/mnemosyne"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AletheiaResearch/mnemosyne/releases/download/v0.1.0/mnemosyne_0.1.0_darwin_amd64.tar.gz"
-      sha256 "3a5cd72c0ef30f73af5fd3a5a19f7008ab7082ceb711879b879ca5881a87e174"
+      url "https://github.com/AletheiaResearch/mnemosyne/releases/download/v0.1.1/mnemosyne_0.1.1_darwin_amd64.tar.gz"
+      sha256 "a28659d441ebd361555bbb236048b10dfa70ea656af0ab9d182083985be8de9c"
 
       define_method(:install) do
         bin.install "mnemosyne"
@@ -19,8 +19,8 @@ class Mnemosyne < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/AletheiaResearch/mnemosyne/releases/download/v0.1.0/mnemosyne_0.1.0_darwin_arm64.tar.gz"
-      sha256 "ab62b3a0fcb5c4d31cc583a29c5de693ccfa336ed287479da813cc7b26f3d178"
+      url "https://github.com/AletheiaResearch/mnemosyne/releases/download/v0.1.1/mnemosyne_0.1.1_darwin_arm64.tar.gz"
+      sha256 "a7f70388f0279b51f66566427b8400371ffb6c33d80229019ecb6b74fe320d02"
 
       define_method(:install) do
         bin.install "mnemosyne"
@@ -31,16 +31,16 @@ class Mnemosyne < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AletheiaResearch/mnemosyne/releases/download/v0.1.0/mnemosyne_0.1.0_linux_amd64.tar.gz"
-      sha256 "ce16b4fe868f2cce8c6e192485ee61bb51fe92f4d38a8e17d29a381abe6864fe"
+      url "https://github.com/AletheiaResearch/mnemosyne/releases/download/v0.1.1/mnemosyne_0.1.1_linux_amd64.tar.gz"
+      sha256 "61d7f05b6faf877deff2003b6d728c3dc368d5931f05fa2a7c80e696c530f9f0"
       define_method(:install) do
         bin.install "mnemosyne"
         bin.install_symlink "mnemosyne" => "mem"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AletheiaResearch/mnemosyne/releases/download/v0.1.0/mnemosyne_0.1.0_linux_arm64.tar.gz"
-      sha256 "a16b7cd017ed7b33f141a8d9223e2ad1edfa1d6411b983a4d1a1feb6564a95b4"
+      url "https://github.com/AletheiaResearch/mnemosyne/releases/download/v0.1.1/mnemosyne_0.1.1_linux_arm64.tar.gz"
+      sha256 "b76e34c48c35f072bea38ecaa8726f3773bf182c40a625998aaaa5b4f8a0ecb4"
       define_method(:install) do
         bin.install "mnemosyne"
         bin.install_symlink "mnemosyne" => "mem"
